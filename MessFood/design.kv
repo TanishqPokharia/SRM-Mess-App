@@ -1,0 +1,387 @@
+WindowManager:
+    id:sm
+    MenuWindow:
+<MenuWindow>:
+    name: "menu"
+
+    MDFloatLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        MDFloatLayout:
+            orientation: 'vertical'
+            size: root.width,root.height
+
+            MDTopAppBar:
+                id:toolbar
+                title: "SRM Mess Menu"
+                right_action_items: [["dots-vertical", lambda x: root.drpdown(x)]]
+                pos_hint:{"top":1}
+                md_bg_color: 234/255, 232/255, 26/255, 1
+
+
+
+            MDFloatingActionButtonSpeedDial:
+                data: app.data
+                root_button_anim: True
+                on_open: app.open()
+                on_close: app.close()
+                bg_color_root_button: 37/255, 183/255, 236/255, 1
+                bg_color_stack_button: 37/255, 183/255, 236/255, 1
+
+        MDCarousel:
+            direction: 'right'
+            size_hint: 0.8,1
+            pos_hint:{"center_x":0.5,"center_y":0.5}
+
+
+            ScrollView:
+                size_hint: (0.85, 0.80)
+                pos_hint: {'center_x': .45, 'y': .05}
+                MDList:
+
+                    MDLabel:
+                        text:"Breakfast"
+                        font_size:40
+                        halign: 'center'
+                    OneLineAvatarIconListItem:
+                        text:"Weekdays 7-9 AM/Weekends 7:30 - 9 AM"
+                        font_size:24
+
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+                            theme_icon_color:"Custom"
+                            icon_color: 0,1,0,1
+
+
+                    OneLineAvatarIconListItem:
+                        id:i1
+                        text:root.breakfast_data1
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i2
+                        text:root.breakfast_data2
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i3
+                        text:root.breakfast_data3
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i4
+                        text:root.breakfast_data4
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i5
+                        text:root.breakfast_data5
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i6
+                        text:root.breakfast_data6
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+
+                    OneLineAvatarIconListItem:
+                        id:i7
+                        text:root.breakfast_data7
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i8
+                        text:root.breakfast_data8
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+
+                    OneLineAvatarIconListItem:
+                        id:i9
+                        text:root.breakfast_data9
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i10
+                        text:root.breakfast_data10
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+
+
+
+
+
+            ScrollView:
+                size_hint: (0.85, 0.80)
+                pos_hint: {'center_x': .45, 'y': .05}
+                MDList:
+                    MDLabel:
+                        text:"Lunch"
+                        font_size:40
+                        halign: 'center'
+
+                    OneLineAvatarIconListItem:
+                        text:"Weekdays 11:30-1 AM/Weekends 12 - 1 AM"
+                        font_size:24
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+                            theme_icon_color:"Custom"
+                            icon_color: 0,1,0,1
+                    OneLineAvatarIconListItem:
+                        id:i1
+                        text:root.lunch_data1
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i2
+                        text:root.lunch_data2
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i3
+                        text:root.lunch_data3
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i4
+                        text:root.lunch_data4
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i5
+                        text:root.lunch_data5
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i6
+                        text:root.lunch_data6
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i7
+                        text:root.lunch_data7
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i8
+                        text:root.lunch_data8
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i9
+                        text:root.lunch_data9
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i10
+                        text:root.lunch_data10
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i11
+                        text:root.lunch_data11
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i12
+                        text:root.lunch_data12
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+
+
+
+
+            ScrollView:
+                size_hint: (0.85, 0.80)
+                pos_hint: {'center_x': .45, 'y': .05}
+                MDList:
+                    MDLabel:
+                        text:"Snacks"
+                        font_size:40
+                        halign: 'center'
+                    OneLineAvatarIconListItem:
+                        text:"4:30-5:30 PM"
+                        font_size:24
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+                            theme_icon_color:"Custom"
+                            icon_color: 0,1,0,1
+                    OneLineAvatarIconListItem:
+                        id:i1
+                        text:root.snacks_data1
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i2
+                        text:root.snacks_data2
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+
+            ScrollView:
+                size_hint: (0.85, 0.80)
+                pos_hint: {'center_x': .45, 'y': .05}
+                MDList:
+                    MDLabel:
+                        text:"Dinner"
+                        font_size:40
+                        halign: 'center'
+                    OneLineAvatarIconListItem:
+                        text:"7:30 - 9 PM"
+                        font_size:24
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+                            theme_icon_color:"Custom"
+                            icon_color: 0,1,0,1
+                    OneLineAvatarIconListItem:
+                        id:i1
+                        text:root.dinner_data1
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i2
+                        text:root.dinner_data2
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i3
+                        text:root.dinner_data3
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i4
+                        text:root.dinner_data4
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i5
+                        text:root.dinner_data5
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i6
+                        text:root.dinner_data6
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i7
+                        text:root.dinner_data7
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i8
+                        text:root.dinner_data8
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i9
+                        text:root.dinner_data9
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i10
+                        text:root.dinner_data10
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i11
+                        text:root.dinner_data11
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i12
+                        text:root.dinner_data12
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i13
+                        text:root.dinner_data13
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i14
+                        text:root.dinner_data14
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+                    OneLineAvatarIconListItem:
+                        id:i15
+                        text:root.dinner_data15
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: 37/255, 183/255, 236/255, 1
+

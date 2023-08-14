@@ -1,0 +1,17 @@
+{
+
+  "monday": ["bread","butter","jam","dosa","chutney","sambar","chapati","white khurma","boiled egg"],
+
+  "tuesday": ["bread","butter","jam","veg samiya khichdi","chapati","chutney","white peas masala","-","-"],
+
+  "wednesday": ["bread","butter","jam","idly","idly podi with oil","sambar","poha","mint chutney","masala omelette"],
+
+  "thursday": ["bread","butter","jam","idayappam(tomato/lemon)/millet idayappam", "chutney","chapati","chana masala","white khurma","-"],
+
+  "friday": ["bread","butter","jam","dosa","idly podi with oil","coconut/tomato chutney","sambar,chapati","rajma masala","-"],
+
+  "saturday": ["bread","butter","jam","pongal","vada","chutney","veg kotsu","poori","aloo bhaji"],
+
+  "sunday": ["bread","butter","jam","veg upma","coconut chutney","chole bhature","-","-","-"]
+
+}
