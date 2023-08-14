@@ -215,6 +215,7 @@ class MessFoodApp(MDApp):
 
 
     def build(self):
+        self.icon = "applogo.png"
         self.theme_preference = self.load_theme_preference()
         self.theme_cls.theme_style = 'Dark' if self.theme_preference == 'dark' else 'Light'
         self.title = "SRM Mess Menu"
@@ -249,6 +250,7 @@ class MessFoodApp(MDApp):
     def save_theme_preference(self):
         store = JsonStore('theme_preference.json')
         store.put('theme', value=self.theme_preference)
+
     def open(self):
         pass
 
