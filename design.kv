@@ -1,0 +1,477 @@
+<Item>
+
+    ImageLeftWidget:
+        source: root.source
+
+
+WindowManager:
+    id:sm
+    MenuWindow:
+<MenuWindow>:
+    name: "menu"
+
+    MDRelativeLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        MDFloatLayout:
+            orientation: 'vertical'
+            size: root.width,root.height
+
+            MDTopAppBar:
+                id:toolbar
+                title: "SRM Mess Menu"
+                anchor_title: "left"
+                right_action_items: [["dots-vertical", lambda x: root.dropdown(x)]]
+                pos_hint:{"top":1}
+                md_bg_color: (200/255,161/255,3/255,1)
+            MDLabel:
+                id:selected_day
+                halign: 'center'
+                font_size:'20sp'
+                text:root.current_day.capitalize()
+                pos_hint:{"center_y":0.947}
+                theme_text_color: "Custom"
+                text_color: (1,1,1,1)
+                bold:True
+
+            MDFloatingActionButtonSpeedDial:
+                id: speedDial
+                data: app.data
+                root_button_anim: True
+                on_open:
+                    app.open()
+                    self.elevation_normal:0
+                on_close:
+                    app.close()
+                    self.elevation_normal:0
+                bg_color_root_button: (19/255,79/255,164/255,1)
+                bg_color_stack_button: (19/255,79/255,164/255,1)
+                label_text_color: (1,1,1,1) if self.theme_cls.theme_style == 'Dark' else (0,0,0,1)
+                bg_color_normal: 1,0,0,1
+                elevation_normal: 0
+
+
+
+
+
+        MDCarousel:
+            id: carousel
+            direction: 'right'
+            pos_hint:{"center_x":0.5,"center_y":0.5}
+            size_hint:0.8,0.75
+
+
+            ScrollView:
+
+                MDList:
+
+                    MDLabel:
+                        text:"Breakfast"
+                        font_size:'18sp'
+                        halign: 'center'
+                    NoRippleTwoLineAvatarIconListItem:
+                        text:"[size=28]Weekdays 7-9 AM[/size]"
+                        secondary_text:"[size=28]Weekends 7:30-9 AM[/size]"
+
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i1
+                        text:f"[size=30]{root.breakfast_data1}[/size]"
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data1 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i2
+                        text:f"[size=28]{root.breakfast_data2}[/size]"
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data2 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i3
+                        text:f"[size=28]{root.breakfast_data3}[/size]"
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data3 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i4
+                        text:f"[size=28]{root.breakfast_data4}[/size]"
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data4 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i5
+                        text:f"[size=28]{root.breakfast_data5}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data5 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i6
+                        text:f"[size=28]{root.breakfast_data6}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data6 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i7
+                        text:f"[size=28]{root.breakfast_data7}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data7 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i8
+                        text:f"[size=28]{root.breakfast_data8}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data8 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i9
+                        text:f"[size=28]{root.breakfast_data9}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data9 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i10
+                        text:f"[size=28]{root.breakfast_data10}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.breakfast_data10 else (38/255, 243/255, 92/255, 1)
+
+            ScrollView:
+
+                MDList:
+                    MDLabel:
+                        text:"Lunch"
+                        font_size:'18sp'
+                        halign: 'center'
+
+                    NoRippleTwoLineAvatarIconListItem:
+                        text:"[size=28]Weekdays 11:30-1 AM[/size] "
+                        secondary_text: "[size=28]Weekends 12 - 1 AM[/size]"
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i1
+                        text:f"[size=28]{root.lunch_data1}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1 )if "chicken" in root.lunch_data1 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i2
+                        text:f"[size=28]{root.lunch_data2}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1 )if "chicken" in root.lunch_data2 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i3
+                        text:f"[size=28]{root.lunch_data3}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data3 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i4
+                        text:f"[size=28]{root.lunch_data4}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data4 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i5
+                        text:f"[size=28]{root.lunch_data5}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data5 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i6
+                        text:f"[size=28]{root.lunch_data6}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data6 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i7
+                        text:f"[size=28]{root.lunch_data7}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data7 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i8
+                        text:f"[size=28]{root.lunch_data8}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data8 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i9
+                        text:f"[size=28]{root.lunch_data9}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data9 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i10
+                        text:f"[size=28]{root.lunch_data10}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data10 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i11
+                        text:f"[size=28]{root.lunch_data11}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data11 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i12
+                        text:f"[size=28]{root.lunch_data12}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.lunch_data12 else (38/255, 243/255, 92/255, 1)
+
+            ScrollView:
+
+                MDList:
+                    MDLabel:
+                        text:"Snacks"
+                        font_size:'18sp'
+                        halign: 'center'
+                    NoRippleOneLineAvatarIconListItem:
+                        text:"[size=28]4:30-5:30 PM[/size]"
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i1
+                        text:f"[size=28]{root.snacks_data1}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (38/255, 243/255, 92/255, 1)
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i2
+                        text:f"[size=28]{root.snacks_data2}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (38/255, 243/255, 92/255, 1)
+
+            ScrollView:
+
+                MDList:
+                    MDLabel:
+                        text:"Dinner"
+                        font_size:'18sp'
+                        halign: 'center'
+                    NoRippleOneLineAvatarIconListItem:
+                        text:"[size=28]7:30 - 9 PM[/size]"
+                        IconLeftWidget:
+                            icon:"clock-time-seven-outline"
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i1
+                        text:f"[size=28]{root.dinner_data1}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data1 or "fish" in root.dinner_data1 or "mutton" in root.dinner_data1 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i2
+                        text:f"[size=28]{root.dinner_data2}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data2 or "fish" in root.dinner_data2 or "mutton" in root.dinner_data2 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i3
+                        text:f"[size=28]{root.dinner_data3}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data3 or "fish" in root.dinner_data3 or "mutton" in root.dinner_data3 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i4
+                        text:f"[size=28]{root.dinner_data4}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data4 or "fish" in root.dinner_data4 or "mutton" in root.dinner_data4 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i5
+                        text:f"[size=28]{root.dinner_data5}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data5 or "fish" in root.dinner_data5 or "mutton" in root.dinner_data5 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i6
+                        text:f"[size=28]{root.dinner_data6}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data6 or "fish" in root.dinner_data6 or "mutton" in root.dinner_data6 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i7
+                        text:f"[size=28]{root.dinner_data7}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data7 or "fish" in root.dinner_data7 or "mutton" in root.dinner_data7 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i8
+                        text:f"[size=28]{root.dinner_data8}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data8 or "fish" in root.dinner_data8 or "mutton" in root.dinner_data8 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i9
+                        text:f"[size=28]{root.dinner_data9}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data9 or "fish" in root.dinner_data9 or "mutton" in root.dinner_data9 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i10
+                        text:f"[size=28]{root.dinner_data10}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data10 or "fish" in root.dinner_data10 or "mutton" in root.dinner_data10 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i11
+                        text:f"[size=28]{root.dinner_data11}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data11 or "fish" in root.dinner_data11 or "mutton" in root.dinner_data11 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i12
+                        text:f"[size=28]{root.dinner_data12}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data12 or "fish" in root.dinner_data12 or "mutton" in root.dinner_data12 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i13
+                        text:f"[size=28]{root.dinner_data13}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data13 or "fish" in root.dinner_data13 or "mutton" in root.dinner_data13 else (38/255, 243/255, 92/255, 1)
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i14
+                        text:f"[size=28]{root.dinner_data14}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data14 or "fish" in root.dinner_data14 or "mutton" in root.dinner_data14 else (38/255, 243/255, 92/255, 1)
+
+
+                    NoRippleOneLineAvatarIconListItem:
+                        id:i15
+                        text:f"[size=28]{root.dinner_data15}[/size]"
+
+                        IconLeftWidget:
+                            icon:"square-rounded"
+                            theme_icon_color:"Custom"
+                            icon_color: (1,0,0,1) if "chicken" in root.dinner_data15 or "fish" in root.dinner_data15 or "mutton" in root.dinner_data15 else (38/255, 243/255, 92/255, 1)
+
