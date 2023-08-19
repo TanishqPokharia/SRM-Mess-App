@@ -29,10 +29,10 @@ WindowManager:
                 halign: 'center'
                 font_size:'20sp'
                 text:root.current_day.capitalize()
-                pos_hint:{"center_y":0.947}
-                theme_text_color: "Custom"
-                text_color: (1,1,1,1)
+                pos_hint:{"center_y":0.85}
+                theme_text_color:"Custom"
                 bold:True
+                text_color: (200/255,161/255,3/255,1)
 
             MDFloatingActionButtonSpeedDial:
                 id: speedDial
@@ -57,7 +57,7 @@ WindowManager:
         MDCarousel:
             id: carousel
             direction: 'right'
-            pos_hint:{"center_x":0.5,"center_y":0.5}
+            pos_hint:{"center_x":0.5,"center_y":0.4}
             size_hint:0.8,0.75
 
 
@@ -474,4 +474,3 @@ WindowManager:
                             icon:"square-rounded"
                             theme_icon_color:"Custom"
                             icon_color: (1,0,0,1) if "chicken" in root.dinner_data15 or "fish" in root.dinner_data15 or "mutton" in root.dinner_data15 else (38/255, 243/255, 92/255, 1)
-
