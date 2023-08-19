@@ -279,12 +279,14 @@ class MessFoodApp(MDApp):
 
     def open(self):
         self.root.get_screen("menu").ids.carousel.size_hint = 0.5, 0.75
-        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.25, "center_y": 0.4}
+        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.25, "center_y": 0.5}
 
     def close(self):
         self.root.get_screen("menu").ids.carousel.size_hint = 0.8, 0.75
-        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.5, "center_y": 0.4}
+        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.5, "center_y": 0.5}
 
 
 if __name__ == '__main__':
     MessFoodApp().run()
+
+
