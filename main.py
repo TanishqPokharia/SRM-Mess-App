@@ -64,7 +64,6 @@ class MenuWindow(MDScreen):
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
     current_day = days[current_day_number]
-
     breakfast = breakfast_data[current_day]
     lunch = lunch_data[current_day]
     snacks = snacks_data[current_day]
@@ -247,7 +246,10 @@ class MessFoodApp(MDApp):
             self.root.get_screen("menu").update_menu("sunday")
             self.root.get_screen("menu").ids.selected_day.text = "Sunday"
 
+
         self.root.get_screen("menu").ids.speedDial.close_stack()
+
+
 
     def build(self):
         dialog = None
@@ -277,11 +279,11 @@ class MessFoodApp(MDApp):
 
     def open(self):
         self.root.get_screen("menu").ids.carousel.size_hint = 0.5, 0.75
-        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.25, "center_y": 0.5}
+        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.25, "center_y": 0.4}
 
     def close(self):
         self.root.get_screen("menu").ids.carousel.size_hint = 0.8, 0.75
-        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.5, "center_y": 0.5}
+        self.root.get_screen("menu").ids.carousel.pos_hint = {"center_x": 0.5, "center_y": 0.4}
 
 
 if __name__ == '__main__':
